@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.fileSelectionBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.errorLb = new System.Windows.Forms.Label();
             this.reportBtn = new System.Windows.Forms.Button();
             this.monthComboBox = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.errorLb = new System.Windows.Forms.Label();
+            this.errorLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -48,20 +52,33 @@
             // 
             // splitContainer.Panel1
             // 
+            this.splitContainer.Panel1.Controls.Add(this.label1);
             this.splitContainer.Panel1.Controls.Add(this.fileSelectionBtn);
             // 
             // splitContainer.Panel2
             // 
+            this.splitContainer.Panel2.Controls.Add(this.errorLbl);
+            this.splitContainer.Panel2.Controls.Add(this.label3);
+            this.splitContainer.Panel2.Controls.Add(this.label2);
             this.splitContainer.Panel2.Controls.Add(this.errorLb);
             this.splitContainer.Panel2.Controls.Add(this.reportBtn);
             this.splitContainer.Panel2.Controls.Add(this.monthComboBox);
-            this.splitContainer.Size = new System.Drawing.Size(669, 383);
-            this.splitContainer.SplitterDistance = 307;
+            this.splitContainer.Size = new System.Drawing.Size(509, 218);
+            this.splitContainer.SplitterDistance = 233;
             this.splitContainer.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Monitor File";
             // 
             // fileSelectionBtn
             // 
-            this.fileSelectionBtn.Location = new System.Drawing.Point(64, 117);
+            this.fileSelectionBtn.Location = new System.Drawing.Point(64, 73);
             this.fileSelectionBtn.Name = "fileSelectionBtn";
             this.fileSelectionBtn.Size = new System.Drawing.Size(75, 23);
             this.fileSelectionBtn.TabIndex = 0;
@@ -69,9 +86,35 @@
             this.fileSelectionBtn.UseVisualStyleBackColor = true;
             this.fileSelectionBtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Month";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Report";
+            // 
+            // errorLb
+            // 
+            this.errorLb.AutoSize = true;
+            this.errorLb.Location = new System.Drawing.Point(82, 82);
+            this.errorLb.Name = "errorLb";
+            this.errorLb.Size = new System.Drawing.Size(0, 13);
+            this.errorLb.TabIndex = 2;
+            // 
             // reportBtn
             // 
-            this.reportBtn.Location = new System.Drawing.Point(82, 163);
+            this.reportBtn.Location = new System.Drawing.Point(85, 112);
             this.reportBtn.Name = "reportBtn";
             this.reportBtn.Size = new System.Drawing.Size(120, 23);
             this.reportBtn.TabIndex = 1;
@@ -95,7 +138,7 @@
             "October",
             "November",
             "December"});
-            this.monthComboBox.Location = new System.Drawing.Point(82, 119);
+            this.monthComboBox.Location = new System.Drawing.Point(85, 73);
             this.monthComboBox.Name = "monthComboBox";
             this.monthComboBox.Size = new System.Drawing.Size(121, 21);
             this.monthComboBox.TabIndex = 0;
@@ -104,24 +147,26 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // errorLb
+            // errorLbl
             // 
-            this.errorLb.AutoSize = true;
-            this.errorLb.Location = new System.Drawing.Point(82, 82);
-            this.errorLb.Name = "errorLb";
-            this.errorLb.Size = new System.Drawing.Size(0, 13);
-            this.errorLb.TabIndex = 2;
+            this.errorLbl.AutoSize = true;
+            this.errorLbl.Location = new System.Drawing.Point(85, 54);
+            this.errorLbl.Name = "errorLbl";
+            this.errorLbl.Size = new System.Drawing.Size(35, 13);
+            this.errorLbl.TabIndex = 5;
+            this.errorLbl.Text = "label4";
             // 
             // MonitorMeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 383);
+            this.ClientSize = new System.Drawing.Size(509, 218);
             this.Controls.Add(this.splitContainer);
             this.Name = "MonitorMeForm";
             this.Text = "Monitor Me";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer.Panel1.ResumeLayout(false);
+            this.splitContainer.Panel1.PerformLayout();
             this.splitContainer.Panel2.ResumeLayout(false);
             this.splitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
@@ -138,6 +183,10 @@
         private System.Windows.Forms.ComboBox monthComboBox;
         private System.Windows.Forms.Button reportBtn;
         private System.Windows.Forms.Label errorLb;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label errorLbl;
     }
 }
 
